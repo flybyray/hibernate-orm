@@ -104,13 +104,16 @@ public class DocumentInterceptor implements Interceptor {
 		return sql;
 	}
 
-	public void onCollectionRecreate(Object collection, Serializable key) throws CallbackException {
+	public boolean onCollectionRecreate(Object collection, Serializable key) throws CallbackException {
+        return true;
 	}
 
-	public void onCollectionRemove(Object collection, Serializable key) throws CallbackException {
+	public boolean onCollectionRemove(Object collection, Serializable key) throws CallbackException {
+        return true;
 	}
 
-	public void onCollectionUpdate(Object collection, Serializable key) throws CallbackException {
+	public boolean onCollectionUpdate(Object collection, Serializable key) throws CallbackException {
+        return true;
 	}
 
 }
